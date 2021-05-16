@@ -1,0 +1,10 @@
+class Solution:
+    def plusOne(self, digits: List[int]) -> List[int]:
+        for i in range(len(digits)-1, -1, -1): # loop for adding 1 to the last element of list
+            if digits[i] < 9:
+                digits[i] += 1
+                return digits
+            digits[i] = 0 # when last element is 9, then replace it with 0 and add the carry by the use of loop to the element just previous to last element
+        return [1] + digits # when the element at first pos i.e at 0th index is also 9, then we need to insert 1 to the beginning of the list. for e.g- [9,9] -> [1,0,0]
+        
+        
