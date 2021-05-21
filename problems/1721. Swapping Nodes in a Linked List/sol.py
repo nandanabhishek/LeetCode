@@ -1,4 +1,4 @@
-# Approach-1: What I thought
+# Approach-1: What I thought - Only values of nodes are swapped here
 
 
 # Definition for singly-linked list.
