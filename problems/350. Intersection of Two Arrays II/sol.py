@@ -22,5 +22,9 @@ class Solution:
                 j+=1
             
         return result
-        
+    
+    
+    
+    # Time complexity : O(n log n)
+    # Space complexity : O(n)
         
