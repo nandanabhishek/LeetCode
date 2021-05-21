@@ -22,7 +22,7 @@ class Solution:
             first=first.next
         
         # for getting last pointer at destination node
-        # it's somewhat working like sliding window
+        # it's somewhat working like sliding window by using this we don't need to count total number of elements in linked list !!!!!!
         temp=first
         while temp.next:
             last=last.next
