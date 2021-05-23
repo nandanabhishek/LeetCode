@@ -18,4 +18,12 @@ class Solution:
             else:
                 curr = curr.next
         return head
+    
+    
+    # time complexity : O(n)
+    # space complexity : O(1)
+    
+
+
+    
         
