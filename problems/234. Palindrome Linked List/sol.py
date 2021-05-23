@@ -20,4 +20,34 @@ class Solution:
       
       
       
-# Approach - 2: With O(n) time and O(1) space
+# Approach - 2: With O(n) time and O(n) space
+
+class Solution:
+    def isPalindrome(self, head: ListNode) -> bool:
+        # base case
+        if head==None or head.next==None:
+            return True
+        
+        a=[] # we will use this as a stack 
+        ptr=head
+        while ptr:
+            a.append(ptr.val)
+            ptr=ptr.next
+        
+        ispalin=True
+        while head:
+            
+            if head.val==a.pop():
+                ispalin=True
+            else:
+                ispalin=False
+                break
+            
+            head=head.next
+        return ispalin
+    
+    
+    
+
+# Approach - 3: with O(n) time and O(1) space
+            # Reverse second half of linked list
