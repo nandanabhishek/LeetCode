@@ -19,6 +19,27 @@ class Solution:
         ans = []
         
         return DFS(root, ans)
+    
+    
+    
+    
+    
+    
+    
+    # approach - 2:
+    
+    
+    
+    def recursive(self, root):
+    def rec(root):
+        if root:
+            for c in root.children:
+                rec(c)
+            out.append(root.val)
+    
+    out = []
+    rec(root)
+    return out
                     
                 
         
