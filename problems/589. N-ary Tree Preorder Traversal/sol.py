@@ -1,3 +1,7 @@
+# Approach - 1 :
+
+
+
 """
 # Definition for a Node.
 class Node:
@@ -30,4 +34,39 @@ class Solution:
         # Then add all the children to the output
         for child in root.children:
             self.dfs(child, output)
+            
+            
+            
+            
+            
+            
+            
+            
+            
+ # Approach - 2 :
+
+
+
+"""
+# Definition for a Node.
+class Node:
+    def __init__(self, val=None, children=None):
+        self.val = val
+        self.children = children
+"""
+
+class Solution:
+    def preorder(self, root: 'Node') -> List[int]:
+        
+        def DFS(root):
+            if root:
+                out.append(root.val)
+                for child in root.children:
+                    DFS(child)
+
+        out = []
+        DFS(root)
+
+        return out
+        
         
