@@ -1,3 +1,32 @@
+# best approach : 
+
+
+
+"""
+# Definition for a Node.
+class Node:
+    def __init__(self, val=None, children=None):
+        self.val = val
+        self.children = children
+"""
+
+class Solution:
+    def preorder(self, root: 'Node') -> List[int]:
+        
+            def DFS(root, ans):
+                if root:                          # only continue when root is not None
+                    ans.append(root.val)          # Append the root
+                    for child in root.children:   # And recurse for its children
+                        DFS(child, ans)
+                return ans
+
+            ans=[]
+            return DFS(root, ans)
+
+
+
+
+
 # Approach - 1 :
 
 
