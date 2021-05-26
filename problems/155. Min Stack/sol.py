@@ -45,19 +45,70 @@ Step 1 is necessary to make sure that the auxiliary stack is also updated for fu
     
     
     
-    '''Time Complexity: 
-For insert operation: O(1) (As insertion ‘push’ in a stack takes constant time)
-For delete operation: O(1) (As deletion ‘pop’ in a stack takes constant time)
-For ‘Get Min’ operation: O(1) (As we have used an auxiliary stack which has it’s top as the minimum element)
+    # Time Complexity: 
+                    '''
+                    For insert operation: O(1) (As insertion ‘push’ in a stack takes constant time)
+                    For delete operation: O(1) (As deletion ‘pop’ in a stack takes constant time)
+                    For ‘Get Min’ operation: O(1) (As we have used an auxiliary stack which has it’s top as the minimum element)
+                    '''
 
-Auxiliary Space: O(n). 
-Use of auxiliary stack for storing values.'''
+    # Auxiliary Space: O(n), Use of auxiliary stack for storing values
+    
+    
+    
+    
+    
+    # Approach - 2 :
+    
+    
+            # Time Complexity : O(1), for each operation
+            # Space Complexity : O(n) in worst case, but less than O(n) in other cases.
+            
+            '''
+            The above approach can be optimized. We can limit the number of elements in the auxiliary stack.
+            We can push only when the incoming element of the main stack is smaller than or equal to the top of the auxiliary stack.
+            Similarly during pop, if the pop-off element equal to the top of the auxiliary stack, remove the top element of the auxiliary stack.
+            '''
+            
+            
+ class MinStack:
+
+    def __init__(self):
+        '''Use two stacks: one to store actual stack elements and the other as an auxiliary stack to store minimum values. The idea is to do push() and pop() operations in such a way that the top of the auxiliary stack is always the minimum
+        '''
+       
+        # initialize your data structure here.
+    
+        
         
 
+    def push(self, x: int) -> None:
+        
 
-# Your MinStack object will be instantiated and called as such:
-# obj = MinStack()
-# obj.push(val)
-# obj.pop()
-# param_3 = obj.top()
-# param_4 = obj.getMin()
+        
+        
+    def pop(self) -> None:
+       
+      
+    
+    
+    def top(self) -> int:
+        
+
+    
+    
+    def getMin(self) -> int:
+        
+        
+        
+        
+        
+
+# Approach - 3 : Most optimized
+
+                                # Time complexity : O(1), for each operation
+                                # Space complexity : O(1)
+            
+            
+        
+
