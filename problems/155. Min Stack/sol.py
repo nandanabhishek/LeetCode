@@ -42,6 +42,16 @@ Step 1 is necessary to make sure that the auxiliary stack is also updated for fu
         if not self.min:
             return None
         return self.min[-1]
+    
+    
+    
+    '''Time Complexity: 
+For insert operation: O(1) (As insertion ‘push’ in a stack takes constant time)
+For delete operation: O(1) (As deletion ‘pop’ in a stack takes constant time)
+For ‘Get Min’ operation: O(1) (As we have used an auxiliary stack which has it’s top as the minimum element)
+
+Auxiliary Space: O(n). 
+Use of auxiliary stack for storing values.'''
         
 
 
