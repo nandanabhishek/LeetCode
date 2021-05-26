@@ -108,6 +108,41 @@ Step 1 is necessary to make sure that the auxiliary stack is also updated for fu
 
                                 # Time complexity : O(1), for each operation
                                 # Space complexity : O(1)
+        
+        
+        
+        
+        
+class MinStack:
+
+    def __init__(self):
+        self.stack = [] # main stack
+        self.minEle=None
+        
+
+    def push(self, x: int) -> None:
+        self.stack.append(x)
+
+        
+        
+    def pop(self) -> None:
+        if not self.stack:
+            return None
+        self.stack.pop()
+      
+    
+    
+    def top(self) -> int:
+        if not self.stack:
+            return None
+        return self.stack[-1]
+
+    
+    
+    def getMin(self) -> int:
+        if not self.stack:
+            return None
+        return min(self.s)
             
             
         
