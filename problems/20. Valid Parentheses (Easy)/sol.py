@@ -33,6 +33,10 @@ class Solution:
         if not stack: # means valid parenthesis
             return True
         return False
+    
+    
+    # Time complexity : O(n)
+    # Space complexity : O(n)
         
         
         
