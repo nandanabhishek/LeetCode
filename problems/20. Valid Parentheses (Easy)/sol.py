@@ -1,21 +1,46 @@
+# Approach - 1 : What I thought !!
+
+
+
 class Solution:
     def isValid(self, s: str) -> bool:
         stack = []
-        par_dic = {
-            ")" : "(",
-            "}" : "{",
-            "]" : "["
-        }
-        
-        for i in s:
-            if i == "{" or i == "[" or i == "(":
-                stack.append(i)
+ 
+        # Traversing the Expression
+        for char in s:
+            if char in ['(', '{', '[']:
+                # Push the element in the stack
+                stack.append(char)
             else:
-                if len(stack) > 0 and stack[-1] == par_dic[i]:
-                    stack.pop()
-                else:
+
+                # IF current character is not opening bracket, then it must be closing.
+                # So stack cannot be empty at this point.
+                if not stack:
                     return False
-        if len(stack) == 0: 
+                
+                current_char = stack.pop()
+                if current_char == '(':
+                    if char != ")":
+                        return False
+                if current_char == '{':
+                    if char != "}":
+                        return False
+                if current_char == '[':
+                    if char != "]":
+                        return False
+
+        # Check Empty Stack
+        if not stack: # means valid parenthesis
             return True
         return False
         
+        
+        
+        
+       
+    
+    
+# Approach - 2 :
+
+
+
