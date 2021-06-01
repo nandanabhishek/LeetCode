@@ -1,3 +1,6 @@
+# Approach - 1 : Simple and general method - O(n^2) time compleity
+
+
 class Solution:
     def rangeSum(self, nums: List[int], n: int, left: int, right: int) -> int:
         
@@ -10,4 +13,12 @@ class Solution:
                 ans.append(pre_sum)
         ans.sort()
         return sum(ans[left-1:right])%(10**9+7)
+    
+    
+    
+    
+    
+    
+# Approach -2 : 
+
                 
