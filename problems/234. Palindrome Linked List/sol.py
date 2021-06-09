@@ -50,4 +50,46 @@ class Solution:
     
 
 # Approach - 3: with O(n) time and O(1) space
-            # Reverse second half of linked list
+            # Reverse second half of linked list  !!!! Best approach
+    
+    
+    
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def isPalindrome(self, head: ListNode) -> bool:
+
+        fast = slow = head
+        
+        # find the mid node
+        while fast and fast.next:
+            fast = fast.next.next
+            slow = slow.next
+            
+        # reverse the second half
+        curr=slow
+        prev = None
+        while curr:
+            nxt = curr.next
+            curr.next = prev
+            prev = curr
+            curr = nxt
+        # compare the first and second half nodes
+        
+        while prev: # while prev and head:
+            if prev.val != head.val:
+                return False
+            prev = prev.next
+            head = head.next
+            
+        return True
+        
+        
+            
+            
+    
+    
+        
