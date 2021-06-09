@@ -14,7 +14,7 @@ class Solution:
         
         inorderIndex = inorder.index(root.val)
 
-        root.right = self.buildTree(inorder[inorderIndex+1:], postorder)
+        root.right = self.buildTree(inorder[inorderIndex+1:], postorder) # fisrt right sub-tree is considered !!!
         root.left = self.buildTree(inorder[:inorderIndex], postorder)
 
         return root
